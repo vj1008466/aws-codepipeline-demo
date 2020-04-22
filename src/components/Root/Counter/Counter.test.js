@@ -40,7 +40,7 @@ test("Counter component works properly", () => {
 
   expect(counterValueEl).toHaveTextContent("1");
   
-    fireEvent.click(plusThreeButtonEl);
+  fireEvent.click(plusThreeButtonEl);
 
   expect(counterValueEl).toHaveTextContent("4");
 });

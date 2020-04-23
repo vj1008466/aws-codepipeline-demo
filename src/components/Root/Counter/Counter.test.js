@@ -7,7 +7,6 @@ test("Counter component works properly", () => {
   const { getByTestId, getByText } = render(<Counter />);
 
   const counterValueEl = getByTestId("counter-value");
-  const minusThreeButtonEl = getByText("-3", { selector: "button" });
   const minusTwoButtonEl = getByText("-2", { selector: "button" });
   const minusOneButtonEl = getByText("-1", { selector: "button" });
   const plusOneButtonEl = getByText("+1", { selector: "button" });
@@ -22,10 +21,6 @@ test("Counter component works properly", () => {
   fireEvent.click(minusTwoButtonEl);
 
   expect(counterValueEl).toHaveTextContent("-3");
-  
-  fireEvent.click(minusThreeButtonEl);
-
-  expect(counterValueEl).toHaveTextContent("-4");
 
   fireEvent.click(plusOneButtonEl);
 

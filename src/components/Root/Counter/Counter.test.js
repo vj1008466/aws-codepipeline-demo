@@ -22,6 +22,10 @@ test("Counter component works properly", () => {
   fireEvent.click(minusTwoButtonEl);
 
   expect(counterValueEl).toHaveTextContent("-3");
+  
+  fireEvent.click(minusThreeButtonEl);
+
+  expect(counterValueEl).toHaveTextContent("-4");
 
   fireEvent.click(plusOneButtonEl);
 
